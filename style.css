@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.background-image{
+    background-image: url(bgc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.clock{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(145, 241, 158);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid black;
+}
+
+.clock ul li{
+    list-style: none;
+    position: absolute;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 5px;
+}
+
+.clock ul li span{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+}
+
+.clock:after{
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+}
+.needle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center bottom; 
+    
+}
+
+.needle span{
+    width: 5px;
+    height: var(--h);
+    background-color: var(--clr);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: center bottom;
+}
